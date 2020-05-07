@@ -1,15 +1,17 @@
-import React from 'react';
+import React from "react";
 
-import Blog from './blog';
+import About from "./about";
+import Blog from "./blog";
 
 class Welcome extends React.Component {
     render() {
-        return(
-            <div>
+        return (
+            <div id="home">
                 <h2>Welcome to my site!</h2>
+                <About />
                 <Blog />
             </div>
-        )
+        );
     }
 }
 
