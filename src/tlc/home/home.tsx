@@ -7,7 +7,7 @@ class Welcome extends React.Component {
     render() {
         return (
             <div id="home">
-                <h2>Welcome to my site!</h2>
+                <h2>Welcome!</h2>
                 <About />
                 <Blog />
             </div>
