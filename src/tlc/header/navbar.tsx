@@ -1,7 +1,6 @@
-import React from 'react';
+import React from "react";
 
-import { Link } from 'react-router-dom';
-
+import { Link } from "react-router-dom";
 
 class NavBar extends React.Component {
     render() {
@@ -9,22 +8,12 @@ class NavBar extends React.Component {
             <nav>
                 <ul>
                     <li>
-                        <Link to='/'>Home</Link>
-                    </li>
-                    <li>
-                        <Link to='/about'>About Me</Link>
-                    </li>
-                    <li>
-                        <Link to='/toolbox'>My ToolBox</Link>
-                    </li>
-                    <li>
-                        <Link to='/long'>Long Page</Link>
+                        <Link to="/">Home</Link>
                     </li>
                 </ul>
             </nav>
         );
     }
 }
-
 
 export default NavBar;

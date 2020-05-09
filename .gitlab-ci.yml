@@ -1,0 +1,36 @@
+image: node:latest
+
+variables:
+    AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+    AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+
+stages:
+    - build
+    - test
+    - deploy-dev
+    - deploy-prod
+
+cache:
+    paths:
+        - node_modules/
+
+build:
+    stage: build
+    script:
+        - npm install
+        - npm run-script build
+
+test:
+    stage: test
+    script:
+        - echo "Running react test suite......"
+
+deploy-dev:
+    stage: deploy-dev
+    script:
+        - npm run-script deploy-dev
+
+deploy-prod:
+    stage: deploy-prod
+    script:
+        - npm run-script deploy
