@@ -33,8 +33,7 @@ deploy-dev:
         - curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "../awscliv2.zip"
         - unzip ../awscliv2.zip -d /tmp
         - /tmp/aws/install -i /tmp/acli -b /tmp/acli
-        - alias aws=/tmp/acli/aws
-        - npm run-script deploy-dev
+        - /tmp/acli/aws s3 cp --recursive ./build s3://gangwerz.xyz
 
 deploy-prod:
     stage: deploy-prod
@@ -44,5 +43,4 @@ deploy-prod:
         - curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "../awscliv2.zip"
         - unzip ../awscliv2.zip -d /tmp
         - /tmp/aws/install -i /tmp/acli -b /tmp/acli
-        - alias aws=/tmp/acli/aws
-        - npm run-script deploy
+        - /tmp/acli/aws s3 cp --recursive ./build s3://dev.gangwerz.xyz
