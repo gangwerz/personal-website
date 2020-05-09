@@ -3,6 +3,8 @@ image: node:latest
 variables:
     AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
     AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+    AWS_DEFAULT_REGION: us-west-2
+    AWS_OUTPUT: yaml
 
 stages:
     - build
@@ -15,28 +17,44 @@ cache:
     paths:
         - node_modules/
 
-build:
-    stage: build
+aws-init:
+    stage: aws-init
+    script:
+        - curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "../awscliv2.zip"
+        - unzip ../awscliv2.zip -d ../
+        - sudo ../aws/install
+
+build-dev:
+    stage: build-dev
     script:
         - npm install
         - npm run-script build
 
-test:
+test-dev:
     stage: test
     script:
         - echo "Running react test suite......"
-
-aws-init:
-    stage: aws-init
-    script:
-        - curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-        - unzip awscliv2.zip
-        - export PATH=$PATH:$PWD/aws/dist
 
 deploy-dev:
     stage: deploy-dev
     script:
         - npm run-script deploy-dev
+
+switch:
+    stage: switch
+    script:
+        - git checkout -f master
+
+build-prod:
+    stage: build-dev
+    script:
+        - npm install
+        - npm run-script build
+
+test-prod:
+    stage: test
+    script:
+        - echo "Running react test suite......"
 
 deploy-prod:
     stage: deploy-prod
