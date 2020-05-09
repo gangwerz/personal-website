@@ -5,9 +5,9 @@
 - General
   
   - [ ] Mobile Styling
-  - [ ] Gitlab CI
-    - [ ] Master to `gangwerz.xyz`
-    - [ ] Develop to `dev.gangwerz.xyz`
+  - [x] Gitlab CI
+    - [x] Master to `gangwerz.xyz`
+    - [x] Develop to `dev.gangwerz.xyz`
 
 - Front Page
   
@@ -33,8 +33,6 @@
 
 - Tool Box Page
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 ## Overview
 
 ## Front Page
@@ -46,3 +44,5 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Tool Box
 
 ## Home Lab
+
+*This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).*
