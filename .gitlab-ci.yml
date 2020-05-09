@@ -1,0 +1,51 @@
+image: node:latest
+
+variables:
+    AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+    AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+    AWS_DEFAULT_REGION: us-west-2
+
+stages:
+    - build
+    - test
+    - deploy-dev
+    - deploy-prod
+
+cache:
+    paths:
+        - node_modules/
+
+build:
+    stage: build
+    script:
+        - npm install
+        - npm run-script build
+    artifacts:
+        paths:
+            - build
+        expire_in: 10 minutes
+
+test:
+    stage: test
+    script:
+        - echo "Running react test suite......"
+
+deploy-dev:
+    stage: deploy-dev
+    only:
+        - develop
+    script:
+        - curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "../awscliv2.zip"
+        - unzip ../awscliv2.zip -d /tmp
+        - /tmp/aws/install -i /tmp/acli -b /tmp/acli
+        - /tmp/acli/aws s3 cp --recursive ./build s3://dev.gangwerz.xyz
+
+deploy-prod:
+    stage: deploy-prod
+    only:
+        - master
+    script:
+        - curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "../awscliv2.zip"
+        - unzip ../awscliv2.zip -d /tmp
+        - /tmp/aws/install -i /tmp/acli -b /tmp/acli
+        - /tmp/acli/aws s3 cp --recursive ./build s3://gangwerz.xyz
