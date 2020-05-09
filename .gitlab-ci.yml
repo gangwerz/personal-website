@@ -3,8 +3,6 @@ image: node:latest
 variables:
     AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
     AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
-    AWS_DEFAULT_REGION: us-west-2
-    AWS_OUTPUT: yaml
 
 stages:
     - aws-init
@@ -34,7 +32,7 @@ build-dev:
         - npm run-script build
 
 test-dev:
-    stage: test
+    stage: test-dev
     script:
         - echo "Running react test suite......"
 
@@ -55,7 +53,7 @@ build-prod:
         - npm run-script build
 
 test-prod:
-    stage: test
+    stage: test-prod
     script:
         - echo "Running react test suite......"
 
