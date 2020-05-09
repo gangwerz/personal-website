@@ -19,6 +19,10 @@ build:
     script:
         - npm install
         - npm run-script build
+    artifacts:
+        paths:
+            - build
+        expire_in: 10 minutes
 
 test:
     stage: test
