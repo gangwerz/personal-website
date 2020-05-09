@@ -32,23 +32,16 @@ test:
 
 deploy-dev:
     stage: deploy-dev
+    image: amazon/aws-cli
     only:
         - develop
     script:
-        - curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "../awscliv2.zip"
-        - unzip ../awscliv2.zip -d /tmp
-        - /tmp/aws/install -i /tmp/acli -b /tmp/acli
-        - /tmp/acli/aws s3 cp --recursive ./build s3://gangwerz.xyz
+        - npm run-script deploy
 
 deploy-prod:
     stage: deploy-prod
+    image: amazon/aws-cli
     only:
         - master
     script:
-        - curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "../awscliv2.zip"
-        - unzip ../awscliv2.zip -d /tmp
-        - /tmp/aws/install -i /tmp/acli -b /tmp/acli
-        - export AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID
-        - export AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
-        - export AWS_DEFAULT_REGION=$AWS_DEFAULT_REGION
-        - /tmp/acli/aws s3 cp --recursive ./build s3://dev.gangwerz.xyz
+        - npm run-script deploy
