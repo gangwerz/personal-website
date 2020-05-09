@@ -7,10 +7,13 @@ variables:
     AWS_OUTPUT: yaml
 
 stages:
-    - build
-    - test
     - aws-init
+    - build-dev
+    - test-dev
     - deploy-dev
+    - switch
+    - build-prod
+    - test-prod
     - deploy-prod
 
 cache:
