@@ -110,14 +110,6 @@ const blogData = [
             "Welcome to my personal website, there are many like it, but this one is mine. The purpose of this website, at the time of writing this, is to serve as an mildly interactive resume, covering my work and other experiences in more depth than a resume and cover letter can, while also having a wider scope. The website is exteremely barebones at the moment, however you can view my plans and progress for this website from the README on my Gitlab account.",
         ],
     },
-    {
-        title: "Second Post",
-        tag: "meta",
-        utc: 1589053340495,
-        content: [
-            "Welcome to my personal website, there are many like it, but this one is mine. The purpose of this website, at the time of writing this, is to serve as an mildly interactive resume, covering my work and other experiences in more depth than a resume and cover letter can, while also having a wider scope. The website is exteremely barebones at the moment, however you can view my plans and progress for this website from the README on my Gitlab account.",
-        ],
-    },
 ];
 
 export default Blog;
