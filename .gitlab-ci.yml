@@ -5,7 +5,6 @@ variables:
     AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
 
 stages:
-    - aws-init
     - build
     - test
     - deploy-dev
@@ -14,13 +13,6 @@ stages:
 cache:
     paths:
         - node_modules/
-
-aws-init:
-    stage: aws-init
-    script:
-        - curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "../awscliv2.zip"
-        - unzip ../awscliv2.zip -d /tmp
-        - /tmp/aws/install -i /tmp/acli -b /tmp/acli
 
 build:
     stage: build
@@ -38,6 +30,9 @@ deploy-dev:
     only:
         - develop
     script:
+        - curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "../awscliv2.zip"
+        - unzip ../awscliv2.zip -d /tmp
+        - /tmp/aws/install -i /tmp/acli -b /tmp/acli
         - alias aws=/tmp/acli/aws
         - npm run-script deploy-dev
 
@@ -46,5 +41,8 @@ deploy-prod:
     only:
         - master
     script:
+        - curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "../awscliv2.zip"
+        - unzip ../awscliv2.zip -d /tmp
+        - /tmp/aws/install -i /tmp/acli -b /tmp/acli
         - alias aws=/tmp/acli/aws
         - npm run-script deploy
