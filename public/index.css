@@ -13,6 +13,12 @@
 
 /* #region Global */
 
+html {
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
 ::-webkit-scrollbar {
     display: none;
 }
@@ -26,7 +32,6 @@ body {
     font-family: Calibri, Roboto, Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    -ms-overflow-style: none;
 
     text-align: center;
     align-self: top;
