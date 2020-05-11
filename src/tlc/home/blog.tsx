@@ -98,8 +98,9 @@ class Blog extends React.Component {
 
 /* Blog Data
     At the present, the blog articles are an array of Post objects.
-    I am considering writing a Python API, a simple Flask API would be easy, however GraphQL is hip at the moment.
-    If the number of articles I reaches a critical mass, I will move them to their own system.
+    I am considering writing a Python API to handle the data in the backend.
+    A simple Flask API would be easy, however GraphQL is hip at the moment.
+    If the number of articles I reaches a critical mass, I will move the posts to their own system.
 */
 const blogData = [
     {

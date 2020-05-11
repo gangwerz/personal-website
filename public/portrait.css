@@ -1,0 +1,27 @@
+/* #region Header */
+
+h1 {
+    font-size: 4rem;
+}
+
+/* #endregion */
+
+/* #region Background */
+
+#background {
+    padding: 1rem;
+}
+
+/* #endregion */
+
+/* #region Content */
+
+/* #region Home Page */
+
+.extern {
+    padding: 1rem;
+}
+
+/* #endregion */
+
+/* #endregion */

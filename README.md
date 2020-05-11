@@ -2,36 +2,36 @@
 
 ## Features
 
-- General
-  
-  - [ ] Mobile Styling
-  - [x] Gitlab CI
-    - [x] Master to `gangwerz.xyz`
-    - [x] Develop to `dev.gangwerz.xyz`
+-   General
 
-- Front Page
-  
-  - About Me Component
-    
-    - [x] External Links
-  
-  - Blog Component
-    
-    - [x] Variable Length Feed Generation
-    
-    - [x] Sorting
-    
-    - [ ] Adjustible Sorting
-    
-    - [ ] Searching
-    
-    - [ ] Markdown Processing
-    
-    - [ ] External/Remote Feed
+    -   [x] Mobile Styling
+    -   [x] Gitlab CI
+        -   [x] Master to `gangwerz.xyz`
+        -   [x] Develop to `dev.gangwerz.xyz`
 
-- Home Lab Page
+-   Front Page
 
-- Tool Box Page
+    -   About Me Component
+
+        -   [x] External Links
+
+    -   Blog Component
+
+        -   [x] Variable Length Feed Generation
+
+        -   [x] Sorting
+
+        -   [ ] Adjustible Sorting
+
+        -   [ ] Searching
+
+        -   [ ] Markdown Processing
+
+        -   [ ] External/Remote Feed
+
+-   Home Lab Page
+
+-   Tool Box Page
 
 ## Overview
 
@@ -45,4 +45,4 @@
 
 ## Home Lab
 
-*This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).*
+_This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app)._
