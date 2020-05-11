@@ -13,16 +13,6 @@
 
 /* #region Global */
 
-html {
-    overflow: auto;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-}
-
-::-webkit-scrollbar {
-    display: none;
-}
-
 body {
     margin: 0;
     padding: 0;
@@ -54,10 +44,7 @@ body {
 
 h1 {
     margin: 0 auto;
-    font-size: 5rem;
     padding-bottom: 0;
-
-    transition: 0.2s ease-out;
 }
 
 /* #region NavBar */
@@ -67,8 +54,6 @@ nav ul {
     padding: 0.75rem;
     padding-top: 0rem;
     padding-bottom: 1.25rem;
-
-    transition: 0.2s ease-out;
 }
 
 nav ul li {
@@ -83,8 +68,6 @@ nav a {
     padding: 0.5rem;
     padding-bottom: 0.1rem;
     margin: 0.3rem;
-
-    transition: 0.5s;
 }
 
 nav a:link {
@@ -93,37 +76,8 @@ nav a:link {
 nav a:visited {
     color: var(--secondary_light);
 }
-nav a:hover {
-    color: var(--font_std);
-    background-color: var(--secondary_light);
-}
 nav a:active {
     color: var(--secondary_light);
-}
-
-/* #endregion */
-
-/* #region Shrinkage */
-
-.shrunk {
-    position: fixed;
-    width: 100%;
-}
-
-.shrunk h1 {
-    font-size: 3rem;
-    margin: 0;
-    padding-left: 0.5rem;
-
-    transition: 0.3s ease-in;
-}
-
-.shrunk ul {
-    padding: 0.5rem;
-    padding-left: 0.2rem;
-    padding-top: 0;
-
-    transition: 0.3s ease-in;
 }
 
 /* #endregion */
@@ -134,9 +88,6 @@ nav a:active {
 
 #background {
     background-color: var(--secondary_light);
-    padding: 20rem;
-    padding-top: 1rem;
-    min-height: 90vh;
 }
 
 /* #endregion */
@@ -158,13 +109,21 @@ nav a:active {
     font-size: 1.25rem;
 }
 
+#home > h2 {
+    margin: 0;
+}
+
 #about {
     text-align: center;
 }
 
 .extern {
     display: inline;
-    padding: 5rem;
+}
+
+#about ul {
+    padding: 0;
+    margin: 0.5rem;
 }
 
 #about a {
@@ -190,113 +149,6 @@ nav a:active {
 .post .pg {
     padding: 0.7rem;
     padding-left: 0;
-}
-
-/* #endregion */
-
-/* #region About Page */
-
-#about-page .paragraph {
-    padding: 1.5rem;
-    font-size: 1.25rem;
-}
-
-/* #endregion */
-
-/* #region Toolbox Page */
-
-#tool-collection {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-}
-
-.tool-item {
-    padding: 0rem;
-    margin: 2rem;
-    margin-top: 0;
-    margin-bottom: 0;
-    border: 2px;
-    border-style: solid;
-    border-color: var(--accent_dark);
-    align-self: center;
-}
-
-#modal {
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background: rgba(0, 0, 0, 0.4);
-}
-
-#modal-content > button {
-    float: right;
-}
-
-#modal-content {
-    background: var(--secondary_light);
-    margin: 5rem;
-    padding: 1rem;
-}
-
-/* #endregion */
-
-/* #region Games Page */
-
-.game {
-    font: 14px "Century Gothic", Futura, sans-serif;
-    align-self: center;
-    margin: inherit auto;
-}
-
-.game ol,
-ul {
-    padding-left: 30px;
-}
-
-.board-row:after {
-    clear: both;
-    content: "";
-    display: table;
-}
-
-.status {
-    margin-bottom: 10px;
-}
-
-.square {
-    background: var(--secondary);
-    border: 1px solid var(--accent_dark);
-    float: left;
-    font-size: 24px;
-    font-weight: bold;
-    line-height: 34px;
-    height: 34px;
-    margin-right: -1px;
-    margin-top: -1px;
-    padding: 0;
-    text-align: center;
-    width: 34px;
-}
-
-.square:focus {
-    outline: none;
-}
-
-.kbd-navigation .square:focus {
-    background: var(--secondary);
-}
-
-.game {
-    display: flex;
-    flex-direction: row;
-}
-
-.game-info {
-    margin-left: 20px;
 }
 
 /* #endregion */

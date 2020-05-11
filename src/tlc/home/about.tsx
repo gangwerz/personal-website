@@ -12,7 +12,7 @@ class About extends React.Component {
                         <a href="http://github.com/gangwerz">Github</a>
                     </li>
                     <li className="extern">
-                        <a href="mailto://web@gangwerz.xyz">E-Mail</a>
+                        <a href="mailto:web@gangwerz.xyz">E-Mail</a>
                     </li>
                 </ul>
             </div>
