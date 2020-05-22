@@ -7,7 +7,6 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 //Components
 import Greeter from "./tlc/greeter";
-import Header from "./tlc/header/header";
 import Welcome from "./tlc/home/home";
 
 function Routes() {

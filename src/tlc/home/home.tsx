@@ -1,7 +1,6 @@
 import React from "react";
 
 import About from "./about";
-import Blog from "./blog";
 
 class Welcome extends React.Component {
     render() {
