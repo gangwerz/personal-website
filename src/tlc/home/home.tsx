@@ -7,9 +7,7 @@ class Welcome extends React.Component {
     render() {
         return (
             <div id="home">
-                <h2>Welcome!</h2>
                 <About />
-                <Blog />
             </div>
         );
     }
