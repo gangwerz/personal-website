@@ -6,15 +6,15 @@ import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 //Components
+import Greeter from "./tlc/greeter";
 import Header from "./tlc/header/header";
 import Welcome from "./tlc/home/home";
 
 function Routes() {
     return (
         <Router>
-            <Header />
-
-            <div id="background">
+            <Greeter />
+            <div id="body" className="page">
                 <div id="content-area">
                     <Switch>
                         <Route path="/">

@@ -29,7 +29,45 @@ body {
     color: var(--font_std);
 }
 
+.page {
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
 /* #endregion */
+
+#greeter {
+    background-color: var(--primary);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#greeter > h1 {
+    margin: 0;
+    width: 100%;
+    color: whitesmoke;
+}
+
+#greeter > ul {
+    display: inline-flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon {
+    background-color: white;
+    border-radius: 50%;
+}
+
+i {
+    color: black;
+}
 
 /* #region Header */
 
@@ -38,7 +76,7 @@ body {
     color: var(--secondary_light);
 
     align-self: center;
-    padding: 0em;
+    padding: 0;
     margin: 0 auto;
 }
 
@@ -86,8 +124,13 @@ nav a:active {
 
 /* #region Background */
 
-#background {
+#body {
     background-color: var(--secondary_light);
+    display: flex;
+    justify-content: center;
+    padding: 1.5rem;
+    min-width: calc(100vw - 3rem);
+    min-height: calc(100vh - 3rem);
 }
 
 /* #endregion */
@@ -95,11 +138,9 @@ nav a:active {
 /* #region Content */
 
 #content-area {
-    align-self: center;
-    align-content: center;
     text-align: left;
     background-color: white;
-    border-radius: 0.5rem;
+    border-radius: 2rem;
 }
 
 /* #region Home Page */
@@ -115,6 +156,29 @@ nav a:active {
 
 #about {
     text-align: center;
+    text-align: left;
+    font-size: 1.7rem;
+    white-space: pre-line;
+}
+
+#about p {
+    text-indent: 2ch;
+}
+
+p.first {
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+p.middle {
+    margin: 0;
+    margin-top: 1;
+    margin-bottom: 1;
+}
+
+p.last {
+    margin: 0;
+    margin-top: 1rem;
 }
 
 .extern {
