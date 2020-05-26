@@ -6,7 +6,7 @@ import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 //Components
-import Greeter from "./tlc/greeter";
+import Greeter from "./tlc/greeter/greeter";
 import Welcome from "./tlc/home/home";
 
 function Routes() {

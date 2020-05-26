@@ -16,7 +16,7 @@ html {
     font-size: 10em;
 }
 
-.icon {
+.badge {
     font-size: 5rem;
     margin: 4rem;
     padding: 1rem;
@@ -24,12 +24,9 @@ html {
     width: 5rem;
 }
 
-i {
-    transition: 0.2s;
-}
-
-i:hover {
-    color: var(--primary);
+.badge:hover {
+    border-radius: 15px;
+    width: auto;
 }
 
 /* #region Header */
