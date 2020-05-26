@@ -1,13 +1,14 @@
 #greeter > h1 {
-    font-size: 5em;
+    font-size: 9rem;
+    overflow-wrap: break-word;
 }
 
-.icon {
-    font-size: 2rem;
+.badge {
+    font-size: 5rem;
     margin: 1rem;
     padding: 1rem;
-    height: 2rem;
-    width: 2rem;
+    height: 5rem;
+    width: 5rem;
 }
 
 /* #region Header */
@@ -19,8 +20,7 @@ h1 {
 /* #endregion */
 
 /* #region Background */
-#body {
-}
+
 /* #endregion */
 
 /* #region Content */

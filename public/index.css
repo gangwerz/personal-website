@@ -30,7 +30,7 @@ body {
 }
 
 .page {
-    min-width: 100vw;
+    min-width: 100%;
     min-height: 100vh;
 }
 
@@ -51,7 +51,7 @@ body {
     color: whitesmoke;
 }
 
-#greeter > ul {
+#badges {
     display: inline-flex;
     list-style: none;
     padding: 0;
@@ -60,13 +60,15 @@ body {
     justify-content: center;
 }
 
-.icon {
+.badge {
     background-color: white;
     border-radius: 50%;
 }
 
-i {
+.badge > a {
+    display: inline-block;
     color: black;
+    text-decoration: none;
 }
 
 /* #region Header */
