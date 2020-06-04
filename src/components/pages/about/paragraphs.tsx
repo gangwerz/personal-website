@@ -6,11 +6,25 @@ const ParagraphCollection = styled.div`
     text-align: left;
     background-color: white;
     border-radius: 2rem;
+    max-width: 99%;
+    min-width: 40%;
+
+    @media (orientation: landscape) {
+        width: 65%;
+    }
+
+    @media (orientation: portrait) {
+        width: 99%;
+    }
 `;
 
 const Paragraph = styled.p`
     text-indent: 2ch;
     margin: 1rem;
+
+    @media (max-width: 500px) {
+        font-size: 1.2rem;
+    }
 `;
 
 const ParagraphLink = styled.a`
@@ -65,9 +79,8 @@ function paragraphs() {
                     href="https://gitlab.com/gangwerz/website/-/issues"
                     target="blank"
                 >
-                    <u>issue</u>
+                    <u>issue.</u>
                 </ParagraphLink>{" "}
-                .
             </Paragraph>
         </ParagraphCollection>
     );

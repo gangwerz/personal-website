@@ -8,7 +8,7 @@ import Parallax from "../../shared/parallax";
 
 const GreeterWrapper = styled.div`
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
 
@@ -16,30 +16,31 @@ const GreeterWrapper = styled.div`
 `;
 
 const GreeterTitle = styled.h1`
-    margin: 0;
     width: 100%;
     color: white;
-    font-size: 10em;
+    font-size: 9em;
 
-    @media only screen and (pointer: coarse) {
-        font-size: 9rem;
+    @media (max-width: 600px) {
+        font-size: 5rem;
         overflow-wrap: break-word;
     }
 `;
 
 const Badges = styled.div`
-    display: inline-flex;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
     list-style: none;
     padding: 0;
     margin: 0;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
 `;
 
 class Greeter extends React.Component {
     render() {
         return (
-            <Parallax img_url="https://cdn.pixabay.com/photo/2016/11/19/14/00/code-1839406_960_720.jpg">
+            <Parallax img_url={process.env.PUBLIC_URL + "/code-bg.jpg"}>
                 <GreeterWrapper className="page">
                     <GreeterTitle>Zach Gangwer</GreeterTitle>
                     <Badges>{this.parseIcons()}</Badges>

@@ -6,6 +6,7 @@ const ParagraphCollection = styled.div`
     text-align: left;
     background-color: white;
     border-radius: 2rem;
+    max-width: 60%;
 `;
 
 const Paragraph = styled.p`

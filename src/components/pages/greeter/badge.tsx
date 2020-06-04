@@ -7,24 +7,20 @@ const BadgeWrapper = styled.div`
     border-radius: 50%;
 
     font-size: 5rem;
-    margin: 4rem;
-    padding: 1rem;
-    height: 5rem;
-    width: 5rem;
+    margin: 0.25em;
+    padding: 0.25em;
+    height: 1em;
+    width: 1em;
+
+    @media (max-width: 350px) {
+        font-size: 3.5rem;
+    }
 
     @media (hover: hover) {
         &:hover {
             border-radius: 15px;
             width: auto;
         }
-    }
-
-    @media (pointer: coarse) {
-        font-size: 5rem;
-        margin: 1rem;
-        padding: 1rem;
-        height: 5rem;
-        width: 5rem;
     }
 `;
 
