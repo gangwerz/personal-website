@@ -7,6 +7,7 @@ interface BackgroundProps {
 }
 
 interface ParallaxProps {
+    children: JSX.Element;
     img_url: string;
 }
 
@@ -26,7 +27,11 @@ const ParallaxBackground = styled.div<BackgroundProps>`
 // }
 
 function Parallax(props: ParallaxProps) {
-    return <ParallaxBackground img={props.img_url}></ParallaxBackground>;
+    return (
+        <ParallaxBackground img={props.img_url}>
+            {props.children}
+        </ParallaxBackground>
+    );
 }
 
 export default Parallax;
