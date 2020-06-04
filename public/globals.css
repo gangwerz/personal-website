@@ -1,0 +1,49 @@
+:root {
+    --primary: #082a5c;
+    --secondary: #ddd;
+    --secondary_light: #eee;
+    --secondary_dark: #aaa;
+    --accent: #5c5c5c;
+    --font_std: #2c3e50;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+    min-height: calc(100vh - 3rem);
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    font-family: Calibri, Roboto, Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    text-align: center;
+    align-self: top;
+
+    color: var(--font_std);
+}
+
+.page {
+    min-width: 100%;
+    min-height: 100vh;
+}
+
+/* @media (pointer: fine) {
+    html {
+    }
+
+
+} */

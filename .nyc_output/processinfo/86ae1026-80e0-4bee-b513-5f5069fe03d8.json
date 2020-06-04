@@ -1,0 +1,1 @@
+{"parent":null,"pid":32084,"argv":["/usr/local/bin/node","/workspaces/frontend/node_modules/mocha/bin/_mocha","test/**/*.js","--exit"],"execArgv":[],"cwd":"/workspaces/frontend","time":1590520406601,"ppid":32060,"coverageFilename":"/workspaces/frontend/.nyc_output/86ae1026-80e0-4bee-b513-5f5069fe03d8.json","externalId":"","uuid":"86ae1026-80e0-4bee-b513-5f5069fe03d8","files":[]}

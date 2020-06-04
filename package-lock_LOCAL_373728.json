@@ -1082,10 +1082,7 @@
       "version": "0.8.8",
       "resolved": "https://registry.npmjs.org/@emotion/is-prop-valid/-/is-prop-valid-0.8.8.tgz",
       "integrity": "sha512-u5WtneEAr5IDG2Wv65yhunPSMLIpuKsbuOktRojfrEiEvRyC85LgPMZI63cr7NUqT8ZIGdSVg8ZKGxIug4lXcA==",
-<<<<<<< HEAD
       "dev": true,
-=======
->>>>>>> feature/parallax
       "requires": {
         "@emotion/memoize": "0.7.4"
       }
@@ -1093,32 +1090,20 @@
     "@emotion/memoize": {
       "version": "0.7.4",
       "resolved": "https://registry.npmjs.org/@emotion/memoize/-/memoize-0.7.4.tgz",
-<<<<<<< HEAD
       "integrity": "sha512-Ja/Vfqe3HpuzRsG1oBtWTHk2PGZ7GR+2Vz5iYGelAw8dx32K0y7PjVuxK6z1nMpZOqAFsRUPCkK1YjJ56qJlgw==",
       "dev": true
-=======
-      "integrity": "sha512-Ja/Vfqe3HpuzRsG1oBtWTHk2PGZ7GR+2Vz5iYGelAw8dx32K0y7PjVuxK6z1nMpZOqAFsRUPCkK1YjJ56qJlgw=="
->>>>>>> feature/parallax
     },
     "@emotion/stylis": {
       "version": "0.8.5",
       "resolved": "https://registry.npmjs.org/@emotion/stylis/-/stylis-0.8.5.tgz",
-<<<<<<< HEAD
       "integrity": "sha512-h6KtPihKFn3T9fuIrwvXXUOwlx3rfUvfZIcP5a6rh8Y7zjE3O06hT5Ss4S/YI1AYhuZ1kjaE/5EaOOI2NqSylQ==",
       "dev": true
-=======
-      "integrity": "sha512-h6KtPihKFn3T9fuIrwvXXUOwlx3rfUvfZIcP5a6rh8Y7zjE3O06hT5Ss4S/YI1AYhuZ1kjaE/5EaOOI2NqSylQ=="
->>>>>>> feature/parallax
     },
     "@emotion/unitless": {
       "version": "0.7.5",
       "resolved": "https://registry.npmjs.org/@emotion/unitless/-/unitless-0.7.5.tgz",
-<<<<<<< HEAD
       "integrity": "sha512-OWORNpfjMsSSUBVrRBVGECkhWcULOAJz9ZW8uK9qgxD+87M7jHRcvh/A96XXNhXTLmKcoYSQtBEX7lHMO7YRwg==",
       "dev": true
-=======
-      "integrity": "sha512-OWORNpfjMsSSUBVrRBVGECkhWcULOAJz9ZW8uK9qgxD+87M7jHRcvh/A96XXNhXTLmKcoYSQtBEX7lHMO7YRwg=="
->>>>>>> feature/parallax
     },
     "@hapi/address": {
       "version": "2.1.4",
@@ -1751,10 +1736,7 @@
       "version": "3.3.1",
       "resolved": "https://registry.npmjs.org/@types/hoist-non-react-statics/-/hoist-non-react-statics-3.3.1.tgz",
       "integrity": "sha512-iMIqiko6ooLrTh1joXodJK5X9xeEALT1kM5G3ZLhD3hszxBdIEd5C75U834D9mLcINgD4OyZf5uQXjkuYydWvA==",
-<<<<<<< HEAD
       "dev": true,
-=======
->>>>>>> feature/parallax
       "requires": {
         "@types/react": "*",
         "hoist-non-react-statics": "^3.3.0"
@@ -1944,14 +1926,6 @@
         "@types/react": "*"
       }
     },
-    "@types/react-native": {
-      "version": "0.62.12",
-      "resolved": "https://registry.npmjs.org/@types/react-native/-/react-native-0.62.12.tgz",
-      "integrity": "sha512-EuM2QOx0LGwY3mKQ313+QcTYOwJhw5eggmE42GO4ElIKIfNK+zxxM6Pe9dT1Eq8eCJXY0oG327L7gUBWniwNNA==",
-      "requires": {
-        "@types/react": "*"
-      }
-    },
     "@types/react-router": {
       "version": "5.1.7",
       "resolved": "https://registry.npmjs.org/@types/react-router/-/react-router-5.1.7.tgz",
@@ -1982,10 +1956,7 @@
       "version": "5.1.0",
       "resolved": "https://registry.npmjs.org/@types/styled-components/-/styled-components-5.1.0.tgz",
       "integrity": "sha512-ZFlLCuwF5r+4Vb7JUmd+Yr2S0UBdBGmI7ctFTgJMypIp3xOHI4LCFVn2dKMvpk6xDB2hLRykrEWMBwJEpUAUIQ==",
-<<<<<<< HEAD
       "dev": true,
-=======
->>>>>>> feature/parallax
       "requires": {
         "@types/hoist-non-react-statics": "*",
         "@types/react": "*",
@@ -2942,10 +2913,7 @@
       "version": "1.10.7",
       "resolved": "https://registry.npmjs.org/babel-plugin-styled-components/-/babel-plugin-styled-components-1.10.7.tgz",
       "integrity": "sha512-MBMHGcIA22996n9hZRf/UJLVVgkEOITuR2SvjHLb5dSTUyR4ZRGn+ngITapes36FI3WLxZHfRhkA1ffHxihOrg==",
-<<<<<<< HEAD
       "dev": true,
-=======
->>>>>>> feature/parallax
       "requires": {
         "@babel/helper-annotate-as-pure": "^7.0.0",
         "@babel/helper-module-imports": "^7.0.0",
@@ -2956,12 +2924,8 @@
     "babel-plugin-syntax-jsx": {
       "version": "6.18.0",
       "resolved": "https://registry.npmjs.org/babel-plugin-syntax-jsx/-/babel-plugin-syntax-jsx-6.18.0.tgz",
-<<<<<<< HEAD
       "integrity": "sha1-CvMqmm4Tyno/1QaeYtew9Y0NiUY=",
       "dev": true
-=======
-      "integrity": "sha1-CvMqmm4Tyno/1QaeYtew9Y0NiUY="
->>>>>>> feature/parallax
     },
     "babel-plugin-syntax-object-rest-spread": {
       "version": "6.13.0",
@@ -3607,12 +3571,8 @@
     "camelize": {
       "version": "1.0.0",
       "resolved": "https://registry.npmjs.org/camelize/-/camelize-1.0.0.tgz",
-<<<<<<< HEAD
       "integrity": "sha1-FkpUg+Yw+kMh5a8HAg5TGDGyYJs=",
       "dev": true
-=======
-      "integrity": "sha1-FkpUg+Yw+kMh5a8HAg5TGDGyYJs="
->>>>>>> feature/parallax
     },
     "caniuse-api": {
       "version": "3.0.0",
@@ -4237,12 +4197,8 @@
     "css-color-keywords": {
       "version": "1.0.0",
       "resolved": "https://registry.npmjs.org/css-color-keywords/-/css-color-keywords-1.0.0.tgz",
-<<<<<<< HEAD
       "integrity": "sha1-/qJhbcZ2spYmhrOvjb2+GAskTgU=",
       "dev": true
-=======
-      "integrity": "sha1-/qJhbcZ2spYmhrOvjb2+GAskTgU="
->>>>>>> feature/parallax
     },
     "css-color-names": {
       "version": "0.0.4",
@@ -4338,10 +4294,7 @@
       "version": "3.0.0",
       "resolved": "https://registry.npmjs.org/css-to-react-native/-/css-to-react-native-3.0.0.tgz",
       "integrity": "sha512-Ro1yETZA813eoyUp2GDBhG2j+YggidUmzO1/v9eYBKR2EHVEniE2MI/NqpTQ954BMpTPZFsGNPm46qFB9dpaPQ==",
-<<<<<<< HEAD
       "dev": true,
-=======
->>>>>>> feature/parallax
       "requires": {
         "camelize": "^1.0.0",
         "css-color-keywords": "^1.0.0",
@@ -13119,12 +13072,8 @@
     "shallowequal": {
       "version": "1.1.0",
       "resolved": "https://registry.npmjs.org/shallowequal/-/shallowequal-1.1.0.tgz",
-<<<<<<< HEAD
       "integrity": "sha512-y0m1JoUZSlPAjXVtPPW70aZWfIL/dSP7AFkRnniLCrK/8MDKog3TySTBmckD+RObVxH0v4Tox67+F14PdED2oQ==",
       "dev": true
-=======
-      "integrity": "sha512-y0m1JoUZSlPAjXVtPPW70aZWfIL/dSP7AFkRnniLCrK/8MDKog3TySTBmckD+RObVxH0v4Tox67+F14PdED2oQ=="
->>>>>>> feature/parallax
     },
     "shebang-command": {
       "version": "1.2.0",
@@ -13861,10 +13810,7 @@
       "version": "5.1.1",
       "resolved": "https://registry.npmjs.org/styled-components/-/styled-components-5.1.1.tgz",
       "integrity": "sha512-1ps8ZAYu2Husx+Vz8D+MvXwEwvMwFv+hqqUwhNlDN5ybg6A+3xyW1ECrAgywhvXapNfXiz79jJyU0x22z0FFTg==",
-<<<<<<< HEAD
       "dev": true,
-=======
->>>>>>> feature/parallax
       "requires": {
         "@babel/helper-module-imports": "^7.0.0",
         "@babel/traverse": "^7.4.5",
