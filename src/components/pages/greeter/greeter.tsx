@@ -4,6 +4,7 @@ import styled from "styled-components";
 
 import Badge from "./badge";
 import badges from "./badgeData";
+import Parallax from "../../shared/parallax";
 
 const GreeterWrapper = styled.div`
     background-color: var(--primary);
@@ -32,10 +33,22 @@ const Badges = styled.div`
 class Greeter extends React.Component {
     render() {
         return (
+<<<<<<< HEAD:src/components/greeter/greeter.tsx
             <GreeterWrapper className="page">
                 <GreeterTitle>Zach Gangwer</GreeterTitle>
                 <Badges>{this.parseIcons()}</Badges>
             </GreeterWrapper>
+=======
+            <div id="greeter" className="page">
+                <Parallax
+                    img_url={
+                        "https://cdn.pixabay.com/photo/2016/11/19/14/00/code-1839406_960_720.jpg"
+                    }
+                ></Parallax>
+                <h1>Zach Gangwer</h1>
+                <div id="badges">{this.parseIcons()}</div>
+            </div>
+>>>>>>> feature/parallax:src/components/pages/greeter/greeter.tsx
         );
     }
 
@@ -45,6 +58,7 @@ class Greeter extends React.Component {
         for (let i = 0; i < badges.length; i++) {
             out.push(
                 <Badge
+                    key={i}
                     name={badges[i].name}
                     link={badges[i].link}
                     icon={badges[i].icon}

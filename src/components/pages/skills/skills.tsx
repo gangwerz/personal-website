@@ -16,7 +16,7 @@ class Skills extends React.Component {
         let out = [];
 
         for (let i = 0; i < mySkills.length; i++) {
-            out.push(<SkillBox title={mySkills[i].title} />);
+            out.push(<SkillBox key={i} title={mySkills[i].title} />);
         }
 
         return out;

@@ -3,9 +3,9 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 //Components
-import Greeter from "./components/greeter/greeter";
-import About from "./components/about/about";
-import Skills from "./components/skills/skills";
+import Greeter from "./components/pages/greeter/greeter";
+import About from "./components/pages/about/about";
+import Skills from "./components/pages/skills/skills";
 
 class App extends React.Component {
     render() {
