@@ -28,3 +28,16 @@ body {
     min-width: 100%;
     min-height: 100vh;
 }
+
+@media (pointer: fine) {
+    html {
+        overflow: auto;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        min-height: calc(100vh - 3rem);
+    }
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+}

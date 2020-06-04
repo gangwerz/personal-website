@@ -5,6 +5,27 @@ import styled from "styled-components";
 const BadgeWrapper = styled.div`
     background-color: white;
     border-radius: 50%;
+
+    font-size: 5rem;
+    margin: 4rem;
+    padding: 1rem;
+    height: 5rem;
+    width: 5rem;
+
+    @media (hover: hover) {
+        &:hover {
+            border-radius: 15px;
+            width: auto;
+        }
+    }
+
+    @media (pointer: coarse) {
+        font-size: 5rem;
+        margin: 1rem;
+        padding: 1rem;
+        height: 5rem;
+        width: 5rem;
+    }
 `;
 
 const BadgeLink = styled.a`

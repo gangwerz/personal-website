@@ -11,12 +11,20 @@ const GreeterWrapper = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
+    background-color: rgba(15, 15, 15, 0.7);
 `;
 
 const GreeterTitle = styled.h1`
     margin: 0;
     width: 100%;
-    color: whitesmoke;
+    color: white;
+    font-size: 10em;
+
+    @media only screen and (pointer: coarse) {
+        font-size: 9rem;
+        overflow-wrap: break-word;
+    }
 `;
 
 const Badges = styled.div`
