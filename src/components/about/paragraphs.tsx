@@ -1,55 +1,76 @@
 import React from "react";
 
-function aboutMe() {
+import styled from "styled-components";
+
+const ParagraphCollection = styled.div`
+    text-align: left;
+    background-color: white;
+    border-radius: 2rem;
+`;
+
+const Paragraph = styled.p`
+    text-indent: 2ch;
+    margin: 1rem;
+`;
+
+const ParagraphLink = styled.a`
+    text-decoration: none;
+    color: var(--font_std);
+`;
+
+function paragraphs() {
     return (
-        <div id="aboutMe">
-            <p className="first">
+        <ParagraphCollection>
+            <Paragraph>
                 Hello! My name is Zach Gangwer and I am a Full-Stack Developer.
                 I have worn many hats, with experience in IT support, Linux, and
                 DevOps in addition to programming.
-            </p>
-            <p className="middle">
+            </Paragraph>
+            <Paragraph>
                 The website you are viewing was written in React, hosted on AWS
                 and features icons from{" "}
-                <a href="https://fontawesome.com/" target="blank">
+                <ParagraphLink href="https://fontawesome.com/" target="blank">
                     <u>Font Awesome</u>
-                </a>
+                </ParagraphLink>
                 . I utilized the{" "}
-                <a
+                <ParagraphLink
                     href="https://github.com/petervanderdoes/gitflow-avh"
                     target="blank"
                 >
                     <u>Git Flow</u>
-                </a>{" "}
+                </ParagraphLink>{" "}
                 utility for my Git version control, and stored the repo on{" "}
-                <a href="https://gitlab.com/gangwerz/website" target="blank">
+                <ParagraphLink
+                    href="https://gitlab.com/gangwerz/website"
+                    target="blank"
+                >
                     <u>Gitlab</u>
-                </a>
+                </ParagraphLink>
                 .
-            </p>
-            <p className="last">
+            </Paragraph>
+            <Paragraph>
                 This site is a space for me to experiment, so the content should
                 be considered dynamic, volitile, and may be (temporarily) full
                 of{" "}
-                <a
+                <ParagraphLink
                     href="https://en.wikipedia.org/wiki/Spaghetti_code"
                     target="blank"
                 >
                     <u>pasta</u>
-                </a>
+                </ParagraphLink>
                 . If you have any styling suggestions, found any bugs, or just
                 want to check my development plan and progress, you can create a
                 Gitlab{" "}
-                <a
+                <ParagraphLink
                     href="https://gitlab.com/gangwerz/website/-/issues"
                     target="blank"
                 >
                     <u>issue</u>
-                </a>{" "}
+                </ParagraphLink>{" "}
                 .
-            </p>
-        </div>
+            </Paragraph>
+        </ParagraphCollection>
     );
 }
 
-export default aboutMe;
+export default paragraphs;

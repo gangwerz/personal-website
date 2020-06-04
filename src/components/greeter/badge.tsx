@@ -1,5 +1,18 @@
 import React from "react";
 
+import styled from "styled-components";
+
+const BadgeWrapper = styled.div`
+    background-color: white;
+    border-radius: 50%;
+`;
+
+const BadgeLink = styled.a`
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+`;
+
 interface BadgeProps {
     name: string;
     link: string;
@@ -21,19 +34,19 @@ class Badge extends React.Component<BadgeProps, BadgeState> {
 
     render() {
         return (
-            <div
+            <BadgeWrapper
                 className="badge"
                 onMouseEnter={() => this.showName()}
                 onMouseLeave={() => this.showIcon()}
             >
-                <a
+                <BadgeLink
                     href={this.props.link}
                     target="blank"
                     className={this.state.displayIcon ? "icon" : "name"}
                 >
                     {this.state.displayIcon ? this.props.icon : this.props.name}
-                </a>
-            </div>
+                </BadgeLink>
+            </BadgeWrapper>
         );
     }
 
