@@ -16,10 +16,16 @@ interface ParallaxProps {
 const ParallaxBackground = styled.div<BackgroundProps>`
     background-image: url(${(props) => props.img});
     height: 100%;
+    width: 100%;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
+    //Disable Parallax on iOS
+    @media (-webkit-touch-callout: none) {
+        background-attachment: scroll;
+    }
 `;
 
 // class Parallax extends React.Component<ParallaxProps, ParallaxState> {
