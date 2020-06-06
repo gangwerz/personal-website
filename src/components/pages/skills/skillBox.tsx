@@ -46,7 +46,23 @@ const BoxTitle = styled.div`
     height: 100%;
     width: 100%;
     text-align: center;
-    font-size 5rem;
+    font-size: 5rem;
+
+    @media (max-width: 650px) {
+        font-size: 4rem;
+    }
+
+    @media (max-width: 550px) {
+        font-size: 3rem;
+    }
+
+    @media (max-width: 450px) {
+        font-size: 2rem;
+    }
+
+    @media (max-width: 350px) {
+        font-size: 1rem;
+    }
 `;
 
 interface SkillBoxProps {
