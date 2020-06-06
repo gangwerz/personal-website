@@ -25,6 +25,7 @@ const ParallaxBackground = styled.div<BackgroundProps>`
     //Disable Parallax on iOS
     @media (-webkit-touch-callout: none) {
         background-attachment: scroll;
+        background-size: 100%;
     }
 `;
 

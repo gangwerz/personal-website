@@ -38,6 +38,11 @@ const SkillBoxWrapper = styled.div<BackgroundProps>`
             background-color: rgba(15, 15, 15, 0.7);
         }
     }
+
+    // Addressing iOS Tomfoolery
+    @media (-webkit-touch-callout: none) {
+        background-size: 100%;
+    }
 `;
 
 const BoxTitle = styled.div`
