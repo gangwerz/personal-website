@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import styled from "styled-components";
 
@@ -78,34 +78,23 @@ interface SkillBoxProps {
     modalContent: JSX.Element;
 }
 
-interface SkillBoxState {
-    showModal: boolean;
-}
+function SkillBox(props: SkillBoxProps) {
 
-class SkillBox extends React.Component<SkillBoxProps, SkillBoxState> {
-    constructor(props: SkillBoxProps) {
-        super(props);
+    const [modalize, setModalize] = useState(false);
 
-        this.state = {
-            showModal: false,
-        };
+    function toggleModal() {
+        setModalize(!modalize);
     }
 
-    render() {
-        return (
-            <SkillBoxWrapper
-                img={process.env.PUBLIC_URL + "/" + this.props.img}
-                onClick={() => this.toggleModal()}
-            >
-                <BoxTitle className="title">{this.props.title}</BoxTitle>
-                <Modal show={this.state.showModal} unmount={() => this.toggleModal}>{this.props.modalContent}</Modal>
-            </SkillBoxWrapper>
-        );
-    }
-
-    toggleModal() {
-        this.setState({ showModal: !this.state.showModal })
-    }
+    return (
+        <SkillBoxWrapper
+            img={process.env.PUBLIC_URL + "/" + props.img}
+            onClick={() => toggleModal()}
+        >
+            <BoxTitle className="title">{props.title}</BoxTitle>
+            <Modal show={modalize} toggleModal={() => toggleModal}>{props.modalContent}</Modal>
+        </SkillBoxWrapper>
+    );
 }
 
 export default SkillBox;

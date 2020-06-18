@@ -7,16 +7,14 @@ import Greeter from "./components/pages/greeter/greeter";
 import About from "./components/pages/about/about";
 import Skills from "./components/pages/skills/skills";
 
-class App extends React.Component {
-    render() {
-        return (
-            <div id="app">
-                <Greeter />
-                <About />
-                <Skills />
-            </div>
-        );
-    }
+function App() {
+    return (
+        <div id="app">
+            <Greeter />
+            <About />
+            <Skills />
+        </div>
+    );
 }
 
 ReactDOM.render(<App />, document.getElementById("root"));

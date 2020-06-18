@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import styled from "styled-components";
 
@@ -16,7 +16,7 @@ const BadgeWrapper = styled.div`
         font-size: 3.5rem;
     }
 
-    @media (hover: hover) {
+    @media (pointer: fine) {
         &:hover {
             border-radius: 15px;
             width: auto;
@@ -36,48 +36,24 @@ interface BadgeProps {
     icon: JSX.Element;
 }
 
-interface BadgeState {
-    displayIcon: boolean;
-}
+function Badge(props: BadgeProps) {
+    const [icon, showIcon] = useState(true);
 
-class Badge extends React.Component<BadgeProps, BadgeState> {
-    constructor(props: BadgeProps) {
-        super(props);
-
-        this.state = {
-            displayIcon: true,
-        };
-    }
-
-    render() {
-        return (
-            <BadgeWrapper
-                className="badge"
-                onMouseEnter={() => this.showName()}
-                onMouseLeave={() => this.showIcon()}
+    return (
+        <BadgeWrapper
+            className="badge"
+            onMouseEnter={() => showIcon(false)}
+            onMouseLeave={() => showIcon(true)}
+        >
+            <BadgeLink
+                href={props.link}
+                target="blank"
+                className={icon ? "icon" : "name"}
             >
-                <BadgeLink
-                    href={this.props.link}
-                    target="blank"
-                    className={this.state.displayIcon ? "icon" : "name"}
-                >
-                    {this.state.displayIcon ? this.props.icon : this.props.name}
-                </BadgeLink>
-            </BadgeWrapper>
-        );
-    }
-
-    showName() {
-        this.setState({
-            displayIcon: false,
-        });
-    }
-
-    showIcon() {
-        this.setState({
-            displayIcon: true,
-        });
-    }
+                {icon ? props.icon : props.name}
+            </BadgeLink>
+        </BadgeWrapper>
+    );
 }
 
 export default Badge;

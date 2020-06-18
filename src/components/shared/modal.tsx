@@ -44,7 +44,7 @@ const ModalDisplayArea = styled.section`
 
 interface ModalProps {
     children: JSX.Element;
-    unmount: () => void;
+    toggleModal: () => void;
     show: boolean;
 }
 
@@ -53,7 +53,7 @@ function Modal(props: ModalProps) {
         ? (
             <ModalBackground>
                 <ModalDisplayArea>
-                    <button onClick={() => props.unmount()}>X</button>
+                    <button onClick={() => props.toggleModal()}>X</button>
                     <div className="modal-content">{props.children}</div>
                 </ModalDisplayArea>
             </ModalBackground >
