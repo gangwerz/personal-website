@@ -50,36 +50,34 @@ const Badges = styled.div`
     justify-content: space-evenly;
 `;
 
-class Greeter extends React.Component {
-    render() {
-        return (
-            <Parallax img_url={process.env.PUBLIC_URL + "/code-bg.jpg"}>
-                <GreeterWrapper>
-                    <GreeterTitle>
-                        <p>Zach</p> <p>Gangwer</p>
-                    </GreeterTitle>
-                    <Badges>{this.parseIcons()}</Badges>
-                </GreeterWrapper>
-            </Parallax>
+function Greeter() {
+    return (
+        <Parallax img_url={process.env.PUBLIC_URL + "/code-bg.jpg"}>
+            <GreeterWrapper>
+                <GreeterTitle>
+                    <p>Zach</p> <p>Gangwer</p>
+                </GreeterTitle>
+                <Badges>{parseIcons()}</Badges>
+            </GreeterWrapper>
+        </Parallax>
+    );
+}
+
+function parseIcons() {
+    let out = [];
+
+    for (let i = 0; i < badges.length; i++) {
+        out.push(
+            <Badge
+                key={i}
+                name={badges[i].name}
+                link={badges[i].link}
+                icon={badges[i].icon}
+            />
         );
     }
 
-    parseIcons() {
-        let out = [];
-
-        for (let i = 0; i < badges.length; i++) {
-            out.push(
-                <Badge
-                    key={i}
-                    name={badges[i].name}
-                    link={badges[i].link}
-                    icon={badges[i].icon}
-                />
-            );
-        }
-
-        return out;
-    }
+    return out;
 }
 
 export default Greeter;
