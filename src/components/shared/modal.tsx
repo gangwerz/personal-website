@@ -44,32 +44,21 @@ const ModalDisplayArea = styled.section`
 
 interface ModalProps {
     children: JSX.Element;
-}
-
-interface ModalState {
+    unmount: () => void;
     show: boolean;
 }
 
-class Modal extends React.Component<ModalProps, ModalState> {
-    constructor(props: ModalProps) {
-        super(props);
-        this.state = { show: false };
-    }
-
-    render() {
-        return this.state.show ? (
+function Modal(props: ModalProps) {
+    return props.show
+        ? (
             <ModalBackground>
                 <ModalDisplayArea>
-                    <button onClick={() => this.toggleModal()}>X</button>
-                    <div className="modal-content">{this.props.children}</div>
+                    <button onClick={() => props.unmount()}>X</button>
+                    <div className="modal-content">{props.children}</div>
                 </ModalDisplayArea>
-            </ModalBackground>
-        ) : null;
-    }
-
-    toggleModal() {
-        this.setState({ show: !this.state.show });
-    }
+            </ModalBackground >
+        )
+        : null;
 }
 
 export default Modal;

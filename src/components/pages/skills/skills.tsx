@@ -28,6 +28,7 @@ class Skills extends React.Component {
                     key={i}
                     title={mySkills[i].title}
                     img={mySkills[i].img}
+                    modalContent={mySkills[i].content}
                 />
             );
         }

@@ -2,6 +2,8 @@ import React from "react";
 
 import styled from "styled-components";
 
+import Modal from "../../shared/modal";
+
 interface BackgroundProps {
     readonly img: string;
 }
@@ -73,19 +75,36 @@ const BoxTitle = styled.div`
 interface SkillBoxProps {
     title: string;
     img: string;
+    modalContent: JSX.Element;
 }
 
-interface SkillBoxState {}
+interface SkillBoxState {
+    showModal: boolean;
+}
 
 class SkillBox extends React.Component<SkillBoxProps, SkillBoxState> {
+    constructor(props: SkillBoxProps) {
+        super(props);
+
+        this.state = {
+            showModal: false,
+        };
+    }
+
     render() {
         return (
             <SkillBoxWrapper
                 img={process.env.PUBLIC_URL + "/" + this.props.img}
+                onClick={() => this.toggleModal()}
             >
                 <BoxTitle className="title">{this.props.title}</BoxTitle>
+                <Modal show={this.state.showModal} unmount={() => this.toggleModal}>{this.props.modalContent}</Modal>
             </SkillBoxWrapper>
         );
+    }
+
+    toggleModal() {
+        this.setState({ showModal: !this.state.showModal })
     }
 }
 
