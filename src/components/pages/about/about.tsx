@@ -15,14 +15,12 @@ const AboutWrapper = styled.section`
     white-space: pre-line;
 `;
 
-class About extends React.Component {
-    render() {
-        return (
-            <AboutWrapper id="about" className="page">
-                {paragraphs()}
-            </AboutWrapper>
-        );
-    }
+function About() {
+    return (
+        <AboutWrapper id="about" className="page">
+            {paragraphs()}
+        </AboutWrapper>
+    );
 }
 
 export default About;
