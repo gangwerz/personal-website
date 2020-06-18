@@ -9,8 +9,6 @@ const AboutWrapper = styled.section`
     display: flex;
     justify-content: center;
     padding: 1.5rem;
-    min-width: calc(100vw - 3rem);
-    min-height: calc(100vh - 3rem);
     text-align: center;
     text-align: left;
     font-size: 1.7rem;

@@ -10,11 +10,13 @@ const SkillsStyle = styled.div`
     justify-content: space-evenly;
     align-content: center;
     flex-flow: row wrap;
+    min-width: 100%;
+    min-height: 100vh;
 `;
 
 class Skills extends React.Component {
     render() {
-        return <SkillsStyle className="page">{this.buildBoxes()}</SkillsStyle>;
+        return <SkillsStyle>{this.buildBoxes()}</SkillsStyle>;
     }
 
     buildBoxes() {

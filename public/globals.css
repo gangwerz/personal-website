@@ -35,15 +35,3 @@ body {
 
     color: var(--font_std);
 }
-
-.page {
-    min-width: 100%;
-    min-height: 100vh;
-}
-
-/* @media (pointer: fine) {
-    html {
-    }
-
-
-} */
