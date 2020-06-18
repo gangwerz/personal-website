@@ -36,10 +36,6 @@ interface BadgeProps {
     icon: JSX.Element;
 }
 
-interface BadgeState {
-    display: boolean;
-}
-
 function Badge(props: BadgeProps) {
     const [icon, showIcon] = useState(true);
 

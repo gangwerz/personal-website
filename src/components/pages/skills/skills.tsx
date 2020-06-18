@@ -14,27 +14,25 @@ const SkillsStyle = styled.div`
     min-height: 100vh;
 `;
 
-class Skills extends React.Component {
-    render() {
-        return <SkillsStyle>{this.buildBoxes()}</SkillsStyle>;
+function Skills() {
+    return <SkillsStyle>{buildBoxes()}</SkillsStyle>;
+}
+
+function buildBoxes() {
+    let out = [];
+
+    for (let i = 0; i < mySkills.length; i++) {
+        out.push(
+            <SkillBox
+                key={i}
+                title={mySkills[i].title}
+                img={mySkills[i].img}
+                modalContent={mySkills[i].content}
+            />
+        );
     }
 
-    buildBoxes() {
-        let out = [];
-
-        for (let i = 0; i < mySkills.length; i++) {
-            out.push(
-                <SkillBox
-                    key={i}
-                    title={mySkills[i].title}
-                    img={mySkills[i].img}
-                    modalContent={mySkills[i].content}
-                />
-            );
-        }
-
-        return out;
-    }
+    return out;
 }
 
 export default Skills;
