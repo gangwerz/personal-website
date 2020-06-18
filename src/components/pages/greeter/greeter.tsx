@@ -12,17 +12,30 @@ const GreeterWrapper = styled.div`
     align-items: center;
     flex-direction: column;
 
+    min-width: 100%;
+    min-height: 100vh;
+
     background-color: rgba(15, 15, 15, 0.7);
 `;
 
 const GreeterTitle = styled.h1`
+    display: flex;
+    flex-flow: wrap row;
+    align-content: center;
+    justify-content: center;
     width: 100%;
     color: white;
     font-size: 9em;
+    margin: 0;
+
+    p {
+        margin: 0;
+        margin-left: 0.2em;
+        margin-right: 0.2em;
+    }
 
     @media (max-width: 600px) {
         font-size: 5rem;
-        overflow-wrap: break-word;
     }
 `;
 
@@ -41,8 +54,10 @@ class Greeter extends React.Component {
     render() {
         return (
             <Parallax img_url={process.env.PUBLIC_URL + "/code-bg.jpg"}>
-                <GreeterWrapper className="page">
-                    <GreeterTitle>Zach Gangwer</GreeterTitle>
+                <GreeterWrapper>
+                    <GreeterTitle>
+                        <p>Zach</p> <p>Gangwer</p>
+                    </GreeterTitle>
                     <Badges>{this.parseIcons()}</Badges>
                 </GreeterWrapper>
             </Parallax>
