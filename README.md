@@ -8,7 +8,7 @@ This is all the code for my personal website, which is 100% client-side and writ
 
 **_This "blog" is only located here temporarily. These entries are being ported to articles for my new [blog](https://blog.gangwerz.xyz)._**
 
-#### 0.5.0
+#### 0.6.0
 
 Shifted the focus of the website from a skills showcase, to an overview of my projects. This is because I would have ended up with a lot of sections with very little content. Now I will have fewer sections, but since the scope is larger, I will have more to say, making each one more worthwhile to read.
 
