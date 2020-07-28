@@ -15,13 +15,6 @@ const BadgeWrapper = styled.div`
     @media (max-width: 350px) {
         font-size: 3.5rem;
     }
-
-    @media (hover: hover) {
-        &:hover {
-            border-radius: 15px;
-            width: auto;
-        }
-    }
 `;
 
 const BadgeLink = styled.a`
@@ -36,48 +29,14 @@ interface BadgeProps {
     icon: JSX.Element;
 }
 
-interface BadgeState {
-    displayIcon: boolean;
-}
-
-class Badge extends React.Component<BadgeProps, BadgeState> {
-    constructor(props: BadgeProps) {
-        super(props);
-
-        this.state = {
-            displayIcon: true,
-        };
-    }
-
-    render() {
-        return (
-            <BadgeWrapper
-                className="badge"
-                onMouseEnter={() => this.showName()}
-                onMouseLeave={() => this.showIcon()}
-            >
-                <BadgeLink
-                    href={this.props.link}
-                    target="blank"
-                    className={this.state.displayIcon ? "icon" : "name"}
-                >
-                    {this.state.displayIcon ? this.props.icon : this.props.name}
-                </BadgeLink>
-            </BadgeWrapper>
-        );
-    }
-
-    showName() {
-        this.setState({
-            displayIcon: false,
-        });
-    }
-
-    showIcon() {
-        this.setState({
-            displayIcon: true,
-        });
-    }
+function Badge(props: BadgeProps) {
+    return (
+        <BadgeWrapper className="badge">
+            <BadgeLink href={props.link} target="_blank" rel="noopener">
+                {props.icon}
+            </BadgeLink>
+        </BadgeWrapper>
+    );
 }
 
 export default Badge;

@@ -14,8 +14,8 @@ const GreeterWrapper = styled.div`
 
     min-width: 100%;
     min-height: 100vh;
-
-    background-color: rgba(15, 15, 15, 0.7);
+    background-color: rgba(15, 15, 15, 0.5);
+    backdrop-filter: blur(3px);
 `;
 
 const GreeterTitle = styled.h1`
@@ -50,36 +50,34 @@ const Badges = styled.div`
     justify-content: space-evenly;
 `;
 
-class Greeter extends React.Component {
-    render() {
-        return (
-            <Parallax img_url={process.env.PUBLIC_URL + "/code-bg.jpg"}>
-                <GreeterWrapper>
-                    <GreeterTitle>
-                        <p>Zach</p> <p>Gangwer</p>
-                    </GreeterTitle>
-                    <Badges>{this.parseIcons()}</Badges>
-                </GreeterWrapper>
-            </Parallax>
+function Greeter() {
+    return (
+        <Parallax img_url="http://assets.gangwerz.xyz/img/homepage/greeter-bg_code.png">
+            <GreeterWrapper>
+                <GreeterTitle>
+                    <p>Zach</p> <p>Gangwer</p>
+                </GreeterTitle>
+                <Badges>{parseIcons()}</Badges>
+            </GreeterWrapper>
+        </Parallax>
+    );
+}
+
+function parseIcons() {
+    let out = [];
+
+    for (let i = 0; i < badges.length; i++) {
+        out.push(
+            <Badge
+                key={i}
+                name={badges[i].name}
+                link={badges[i].link}
+                icon={badges[i].icon}
+            />
         );
     }
 
-    parseIcons() {
-        let out = [];
-
-        for (let i = 0; i < badges.length; i++) {
-            out.push(
-                <Badge
-                    key={i}
-                    name={badges[i].name}
-                    link={badges[i].link}
-                    icon={badges[i].icon}
-                />
-            );
-        }
-
-        return out;
-    }
+    return out;
 }
 
 export default Greeter;

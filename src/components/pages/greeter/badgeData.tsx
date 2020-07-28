@@ -8,8 +8,7 @@ const badges = [
     },
     {
         name: "Resume",
-        link:
-            "https://s3-us-west-2.amazonaws.com/assets.gangwerz.xyz/Zach_Gangwer-Resume.pdf",
+        link: "http://assets.gangwerz.xyz/resources/Zach_Gangwer-Resume.pdf",
         icon: <i className="far fa-file"></i>,
     },
     {
