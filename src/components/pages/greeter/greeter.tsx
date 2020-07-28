@@ -14,8 +14,8 @@ const GreeterWrapper = styled.div`
 
     min-width: 100%;
     min-height: 100vh;
-
-    background-color: rgba(15, 15, 15, 0.7);
+    background-color: rgba(15, 15, 15, 0.5);
+    backdrop-filter: blur(3px);
 `;
 
 const GreeterTitle = styled.h1`
@@ -52,7 +52,7 @@ const Badges = styled.div`
 
 function Greeter() {
     return (
-        <Parallax img_url={process.env.PUBLIC_URL + "/code-bg.jpg"}>
+        <Parallax img_url="http://assets.gangwerz.xyz/img/homepage/greeter-bg_code.png">
             <GreeterWrapper>
                 <GreeterTitle>
                     <p>Zach</p> <p>Gangwer</p>

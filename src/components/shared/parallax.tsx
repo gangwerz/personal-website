@@ -7,7 +7,7 @@ interface BackgroundProps {
 }
 
 interface ParallaxProps {
-    children: JSX.Element;
+    children: JSX.Element | JSX.Element[];
     img_url: string;
 }
 

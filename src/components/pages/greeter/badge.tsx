@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import styled from "styled-components";
 
@@ -15,13 +15,6 @@ const BadgeWrapper = styled.div`
     @media (max-width: 350px) {
         font-size: 3.5rem;
     }
-
-    @media (pointer: fine) {
-        &:hover {
-            border-radius: 15px;
-            width: auto;
-        }
-    }
 `;
 
 const BadgeLink = styled.a`
@@ -37,20 +30,10 @@ interface BadgeProps {
 }
 
 function Badge(props: BadgeProps) {
-    const [icon, showIcon] = useState(true);
-
     return (
-        <BadgeWrapper
-            className="badge"
-            onMouseEnter={() => showIcon(false)}
-            onMouseLeave={() => showIcon(true)}
-        >
-            <BadgeLink
-                href={props.link}
-                target="blank"
-                className={icon ? "icon" : "name"}
-            >
-                {icon ? props.icon : props.name}
+        <BadgeWrapper className="badge">
+            <BadgeLink href={props.link} target="_blank" rel="noopener">
+                {props.icon}
             </BadgeLink>
         </BadgeWrapper>
     );

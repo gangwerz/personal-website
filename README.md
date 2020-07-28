@@ -6,7 +6,11 @@ This is all the code for my personal website, which is 100% client-side and writ
 
 ## The Change Blog
 
-**_This "blog" is only located here temporarily. Once I have server hosting picked out, I will move the contents of this section to a dedicated website._**
+**_This "blog" is only located here temporarily. These entries are being ported to articles for my new [blog](https://blog.gangwerz.xyz)._**
+
+#### 0.5.0
+
+Shifted the focus of the website from a skills showcase, to an overview of my projects. This is because I would have ended up with a lot of sections with very little content. Now I will have fewer sections, but since the scope is larger, I will have more to say, making each one more worthwhile to read.
 
 #### 0.4.1
 
@@ -22,7 +26,7 @@ _While writing the 0.4.0 release, I decided to add the blog to the README. Any p
 
 #### 0.3.2
 
-In response to a job posting asking for a *link* to a resume, in place of an upload, I added a badge icon to my resume. After showing my website to some family, they were confused about the Gitlab and GitHub links, as they are outside of the tech-world, so I  added some hover behavior to show the name of the icon and clear that up for the lay-folk. I took the opportunity to update the About Me content.
+In response to a job posting asking for a _link_ to a resume, in place of an upload, I added a badge icon to my resume. After showing my website to some family, they were confused about the Gitlab and GitHub links, as they are outside of the tech-world, so I added some hover behavior to show the name of the icon and clear that up for the lay-folk. I took the opportunity to update the About Me content.
 
 #### 0.3.1
 
@@ -44,8 +48,6 @@ After publishing, I did not like the look of the duplicate, second post as it ga
 
 As I explored more and more Front-end and Full-stack developer jobs, I realized how wide the chasm between React and every other framework was. At that point, I ported the previous Vue website to React, however I opted to continue writing in Typescript instead of standard ECMAscript.
 
-I was looking to have a unified style between my Resume, Cover Letter, and Website. So, this build features a blue, bar-styled header with an animated navbar, although only one page was implemented at this point. The main body of the homepage had a rudimentary "about me" section that only had git repo and email links. The rest of the page was going to be dedicated to blog articles, so there are two articles hard coded in. I wanted to have a white-on-white, card-style layout for the blog posts although the values used at this point were abysmal. 
+I was looking to have a unified style between my Resume, Cover Letter, and Website. So, this build features a blue, bar-styled header with an animated navbar, although only one page was implemented at this point. The main body of the homepage had a rudimentary "about me" section that only had git repo and email links. The rest of the page was going to be dedicated to blog articles, so there are two articles hard coded in. I wanted to have a white-on-white, card-style layout for the blog posts although the values used at this point were abysmal.
 
 ### Previous Framework - Vue
-
-

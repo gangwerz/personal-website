@@ -2,10 +2,9 @@ import React from "react";
 
 import styled from "styled-components";
 
-const ModalBackground = styled.section`
+const Background = styled.section`
     diplay: float;
     position: fixed;
-    padding: 2rem;
     background-color: rgba(15, 15, 15, 0.7);
 
     width: 100%;
@@ -16,13 +15,30 @@ const ModalBackground = styled.section`
     left: 0;
 `;
 
-const ModalDisplayArea = styled.section`
+const DisplayArea = styled.section`
     padding: 1rem;
     background-color: white;
-    min-height: 90%;
-    max-height: 95%;
-    max-width: 95%;
-    min-width: 75%;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    @media (orientation: landscape) and (pointer: fine) {
+        width: 50%;
+        margin-top: 4rem;
+        margin-bottom: 2rem;
+    }
+
+    @media (orientation: portrait) and (pointer: fine) {
+        width: 100%-2rem;
+        margin: 1rem;
+    }
+
+    @media (pointer: coarse) {
+        width: 100%-2rem;
+        margin: 1rem;
+    }
 
     button {
         display: float;
@@ -49,16 +65,14 @@ interface ModalProps {
 }
 
 function Modal(props: ModalProps) {
-    return props.show
-        ? (
-            <ModalBackground>
-                <ModalDisplayArea>
-                    <button onClick={() => props.toggleModal()}>X</button>
-                    <div className="modal-content">{props.children}</div>
-                </ModalDisplayArea>
-            </ModalBackground >
-        )
-        : null;
+    return props.show ? (
+        <Background>
+            <DisplayArea>
+                <button onClick={() => props.toggleModal()}>X</button>
+                <div className="modal-content">{props.children}</div>
+            </DisplayArea>
+        </Background>
+    ) : null;
 }
 
 export default Modal;
